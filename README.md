@@ -1,5 +1,6 @@
 # MyGate - Residential Community Management System
 
+
 A secure REST API backend for managing residential communities.
 
 ## Features
@@ -66,6 +67,66 @@ Run tests using:
 npm test
 ```
 
+Here's your complete guide to installing and running the application using Docker:
+
+Prerequisites
+Install Docker:
+
+Windows/Mac: Download and install Docker Desktop from https://www.docker.com/products/docker-desktop
+Linux: Run these commands:
+
+sudo apt-get update
+sudo apt-get install docker.io docker-compose
+Verify installation:
+
+
+docker --version
+docker-compose --version
+Setup Instructions
+Environment Configuration
+
+Copy .env.example to .env
+
+Update the environment variables with your Supabase credentials
+
+cp .env.example .env
+Build the Docker Image
+
+
+# Using Docker
+docker build -t mygate-backend .
+
+# Or using Docker Compose
+docker-compose build
+Run the Container
+
+
+# Using Docker
+docker run -p 3000:3000 --env-file .env mygate-backend
+
+# Or using Docker Compose (recommended)
+docker-compose up -d
+Verify the Application
+
+The API should now be running at http://localhost:3000
+Access the Swagger documentation at http://localhost:3000/api-docs
+Test the health endpoint: http://localhost:3000/api/health
+Additional Commands
+
+# View logs
+docker-compose logs -f
+
+# Stop the container
+docker-compose down
+
+# Restart the container
+
+docker-compose restart
+
+# Remove containers and volumes
+docker-compose down -v
+
+
 ## Deployment
 
 1. Set up a Supabase project
@@ -83,3 +144,6 @@ The application uses Winston for logging. Logs are stored in:
 ## License
 
 MIT
+
+
+
