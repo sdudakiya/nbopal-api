@@ -1,52 +1,69 @@
 import express from 'express';
-import cors from 'cors';
-import helmet from 'helmet';
-import rateLimit from 'express-rate-limit';
-import morgan from 'morgan';
-import dotenv from 'dotenv';
-import swaggerUi from 'swagger-ui-express';
-
+import { config } from './config/index.js';
+import { middleware } from './middleware/index.js';
 import { logger } from './utils/logger.js';
-import { errorHandler } from './middleware/errorHandler.js';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from './swagger.js';
+
+// Import routes
 import authRoutes from './routes/auth.routes.js';
 import userRoutes from './routes/user.routes.js';
 import visitorRoutes from './routes/visitor.routes.js';
 import vehicleRoutes from './routes/vehicle.routes.js';
 import staffRoutes from './routes/staff.routes.js';
 import notificationRoutes from './routes/notification.routes.js';
-
-dotenv.config();
+import healthRoutes from './routes/health.routes.js';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+
+// Trust proxy if behind a reverse proxy
+if (config.server.trustProxy) {
+  app.set('trust proxy', 1);
+}
 
 // Security middleware
-app.use(helmet());
-app.use(cors());
+app.use(middleware.security.helmet);
+app.use(middleware.security.cors);
+app.use(middleware.security.rateLimiter());
+
+// Basic middleware
 app.use(express.json());
-app.use(morgan('combined', { stream: { write: message => logger.info(message.trim()) } }));
+app.use(express.urlencoded({ extended: true }));
 
-// Rate limiting
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100 // limit each IP to 100 requests per windowMs
+// Logging middleware
+app.use(middleware.logging.morgan);
+
+// Health check route (before API routes)
+app.use('/api/health', healthRoutes);
+
+// API routes
+const apiRouter = express.Router();
+apiRouter.use('/auth', authRoutes);
+apiRouter.use('/users', userRoutes);
+apiRouter.use('/visitors', visitorRoutes);
+apiRouter.use('/vehicles', vehicleRoutes);
+apiRouter.use('/staff', staffRoutes);
+apiRouter.use('/notifications', notificationRoutes);
+
+// Mount API routes under /api
+app.use(config.server.apiPrefix, apiRouter);
+
+// Root route handler
+app.get('/', (req, res) => {
+  res.json({
+    message: 'MyGate API Server',
+    version: process.env.npm_package_version,
+    docs: '/api-docs'
+  });
 });
-app.use(limiter);
-
-// Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/visitors', visitorRoutes);
-app.use('/api/vehicles', vehicleRoutes);
-app.use('/api/staff', staffRoutes);
-app.use('/api/notifications', notificationRoutes);
 
 // Swagger documentation
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup());
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Error handling
-app.use(errorHandler);
+app.use(middleware.errorHandler);
 
-app.listen(PORT, () => {
-  logger.info(`Server running on port ${PORT}`);
+// Start server
+app.listen(config.server.port, config.server.host, () => {
+  logger.info(`Server running on ${config.server.host}:${config.server.port}`);
 });

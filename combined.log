@@ -1,0 +1,27 @@
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T11:49:44.663Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T11:49:47.683Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:49:48 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:49:48.132Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T11:49:55.945Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:49:56 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:49:56.029Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:49:59 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:49:59.474Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T11:51:25.971Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:51:26 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:51:26.398Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T11:52:32.062Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:52:32 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:52:32.359Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T11:52:36.087Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:52:36 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:52:36.143Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:52:41 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:52:41.186Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:52:58 +0000] \"GET /api HTTP/1.1\" 404 142 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:52:58.490Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T11:53:11.452Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:53:11 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:53:11.537Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T11:53:31.789Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:53:31 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:53:31.895Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:53:33 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:53:33.054Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T11:54:49.737Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:54:50 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:54:50.177Z"}
+{"level":"info","message":"- - - [16/Dec/2024:11:54:59 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T11:54:59.483Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T12:01:07.537Z"}
+{"level":"info","message":"- - - [16/Dec/2024:12:01:07 +0000] \"GET / HTTP/1.1\" 404 139 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T12:01:07.846Z"}
+{"level":"info","message":"Server running on 0.0.0.0:3000","timestamp":"2024-12-16T12:01:18.427Z"}
+{"level":"info","message":"- - - [16/Dec/2024:12:01:18 +0000] \"GET / HTTP/1.1\" 200 68 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T12:01:18.550Z"}
+{"level":"info","message":"- - - [16/Dec/2024:12:01:21 +0000] \"GET / HTTP/1.1\" 200 68 \"https://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\"","timestamp":"2024-12-16T12:01:21.659Z"}
